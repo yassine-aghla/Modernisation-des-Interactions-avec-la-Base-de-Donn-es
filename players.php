@@ -73,14 +73,14 @@ try {
     $db = new Players('localhost', 'joueurs', 'root', '');
 
     // Ajouter un joueur
-    // $db->insert('players', [
-    //     'name' => 'salma elallali',
-    //     'photo' => 'ronaldo.jpg',
-    //     'position' => 'ST',
-    //     'club' => 'Real madrid chichaoua',
-    //     'nationality' => 'Portugal',
-    //     'rating' => 99
-    // ]);
+    $db->insert('players', [
+        'name' => 'yassine aghla',
+        'photo' => 'ronaldo.jpg',
+        'position' => 'ST',
+        'club' => 'Real madrid chichaoua',
+        'nationality' => 'Portugal',
+        'rating' => 99
+    ]);
 
     // Lire tous les joueurs
     $players = $db->select('players');
@@ -89,16 +89,16 @@ try {
     echo "</pre>";
 
     // Mettre à jour un joueur
-    // $db->update('players', [
-    //     'name' => 'younnes',
-    //     'club' => 'mas',
-    //     'position' => 'MR',
-    //     'nationality' => 'MAROC',
-    //     'rating' => 76
-    // ], "player_id = 76");
+    $db->update('players', [
+        'name' => 'yahya',
+        'club' => 'ocs',
+        'position' => 'MR',
+        'nationality' => 'MAROC',
+        'rating' => 76
+    ], "player_id = 76");
 
     // Supprimer un joueur
-    $db->delete('players', "player_id = 102");
+    $db->delete('players', "player_id = 104");
 
 } catch (Exception $e) {
     echo "Erreur : " . $e->getMessage();
