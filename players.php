@@ -76,7 +76,7 @@ try {
     $db->insert('players', [
         'name' => 'mouad',
         'photo' => 'ronaldo.jpg',
-        'position' => 'Forward',
+        'position' => 'ST',
         'club' => 'Al-Nassr',
         'nationality' => 'Portugal',
         'rating' => 94
@@ -90,8 +90,11 @@ try {
     // Mettre à jour un joueur
     $db->update('players', [
         'name' => 'younnes',
-        'club' => 'mas'
-    ], "player_id = 39");
+        'club' => 'mas',
+        'position' => 'MR',
+        'nationality' => 'MAROC',
+        'rating' => 76
+    ], "player_id = 76");
 
     // Supprimer un joueur
     // $db->delete('players', "player_id = 37");
